@@ -9,7 +9,6 @@ TABLES
 > - firstName
 > - lastName
 > - phone
-> - address
 
 - orders
 > - orderID
