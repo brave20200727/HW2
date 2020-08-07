@@ -5,40 +5,40 @@
 TABLES
 
 - customers
-> customerID
-> firstName
-> lastName
-> phone
-> address
+> - customerID
+> - firstName
+> - lastName
+> - phone
+> - address
 
 - orders
-> orderID
-> startTime
-> endTime
+> - orderID
+> - startTime
+> - endTime
 
 - orderDetails
-> orderID
-> productID
-> quantity
-> unitPrice
+> - orderID
+> - productID
+> - quantity
+> - unitPrice
 
 - restaurants
-> restaurantID
-> restaurantName
-> adress
-> phone
-> restaurantTypeID
+> - restaurantID
+> - restaurantName
+> - adress
+> - phone
+> - restaurantTypeID
 
 - restaurantTypes
-> restaurantTypeID
-> restaurantTypeName
+> - restaurantTypeID
+> - restaurantTypeName
 
 - products
-> productID
-> productName
-> unitPrice
-> restaurantID
+> - productID
+> - productName
+> - unitPrice
+> - restaurantID
 
 - productTypes
-> productTypeID
-> productTypeName
+> - productTypeID
+> - productTypeName
