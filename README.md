@@ -4,10 +4,9 @@
 
 TABLES
 
-- customers
-> - customerID
-> - firstName
-> - lastName
+- users
+> - userID
+> - userName
 > - phone
 
 - orders
@@ -19,12 +18,11 @@ TABLES
 > - orderID
 > - productID
 > - quantity
-> - unitPrice
 
 - restaurants
 > - restaurantID
 > - restaurantName
-> - adress
+> - address
 > - phone
 > - restaurantTypeID
 
