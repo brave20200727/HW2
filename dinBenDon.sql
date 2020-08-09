@@ -36,7 +36,11 @@ CREATE TABLE `orderDetails` (
   `quantity` int(11) DEFAULT NULL,
   `userID` int(11) DEFAULT NULL,
   KEY `orderID` (`orderID`),
-  CONSTRAINT `orderDetails_ibfk_1` FOREIGN KEY (`orderID`) REFERENCES `orders` (`orderID`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `userID` (`userID`),
+  KEY `productID` (`productID`),
+  CONSTRAINT `orderDetails_ibfk_1` FOREIGN KEY (`orderID`) REFERENCES `orders` (`orderID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `orderDetails_ibfk_2` FOREIGN KEY (`userID`) REFERENCES `users` (`userID`) ON DELETE CASCADE,
+  CONSTRAINT `orderDetails_ibfk_3` FOREIGN KEY (`productID`) REFERENCES `products` (`productID`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -112,7 +116,9 @@ CREATE TABLE `products` (
   `unitPrice` int(11) DEFAULT NULL,
   `restaurantID` int(11) DEFAULT NULL,
   `productTypeID` int(11) DEFAULT NULL,
-  PRIMARY KEY (`productID`)
+  PRIMARY KEY (`productID`),
+  KEY `restaurantID` (`restaurantID`),
+  CONSTRAINT `products_ibfk_1` FOREIGN KEY (`restaurantID`) REFERENCES `restaurants` (`restaurantID`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -212,4 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-09  8:31:07
+-- Dump completed on 2020-08-09  9:01:24
