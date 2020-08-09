@@ -35,6 +35,7 @@ TABLES
 > - productName
 > - unitPrice
 > - restaurantID
+> - productTypeID
 
 - productTypes
 > - productTypeID
